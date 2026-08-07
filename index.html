@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1ea">
+  <meta name="description" content="RobLab: diseño, fabricación y soluciones personalizadas.">
+  <title>RobLab | Diseño y soluciones personalizadas</title>
+  <style>
+    :root{
+      --bg:#f5f1ea; --card:#fffdf9; --ink:#111; --muted:#6c675f;
+      --wood:#5b2d12; --wood2:#7a431f; --line:#ddd4c8;
+      --shadow:0 18px 45px rgba(44,28,14,.12);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; min-height:100vh; padding:24px; display:grid; place-items:center;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%,rgba(122,67,31,.08),transparent 30%),
+        radial-gradient(circle at 85% 80%,rgba(91,45,18,.07),transparent 28%),
+        var(--bg);
+    }
+    .shell{
+      width:min(100%,460px); overflow:hidden; border-radius:32px;
+      background:rgba(255,253,249,.94); border:1px solid rgba(91,45,18,.12);
+      box-shadow:var(--shadow);
+    }
+    .top{height:7px;background:linear-gradient(90deg,var(--wood),var(--wood2),var(--wood))}
+    main{padding:34px 26px 26px}
+    .logo{
+      width:180px;height:180px;margin:0 auto 18px;border-radius:28px;overflow:hidden;
+      background:#fff;border:1px solid #eee6dc;box-shadow:0 10px 28px rgba(0,0,0,.08)
+    }
+    .logo img{width:100%;height:100%;object-fit:contain;display:block}
+    h1{margin:0;text-align:center;font-size:clamp(2rem,7vw,3rem);letter-spacing:.22em;padding-left:.22em}
+    .tagline{margin:10px auto 26px;max-width:330px;text-align:center;color:var(--muted);line-height:1.55}
+    .slashes{display:flex;justify-content:center;gap:9px;margin:14px 0 24px}
+    .slashes span{width:46px;height:10px;background:var(--wood);transform:skewX(-38deg);border-radius:2px}
+    .links{display:grid;gap:13px}
+    .btn{
+      display:flex;align-items:center;gap:14px;width:100%;padding:17px 18px;border-radius:18px;
+      text-decoration:none;font-weight:750;border:1px solid transparent;
+      box-shadow:0 8px 20px rgba(0,0,0,.06);transition:.2s ease
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.1)}
+    .icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;flex:0 0 auto;font-size:1.25rem}
+    .label{flex:1}.label strong{display:block}.label small{display:block;font-size:.78rem;opacity:.78;margin-top:2px}
+    .arrow{font-size:1.25rem;opacity:.75}
+    .whatsapp{background:#111;color:#fff}.whatsapp .icon{background:var(--wood);color:#fff}
+    .instagram{background:#fff;color:#111;border-color:var(--line)}.instagram .icon{background:#f1e8df;color:var(--wood)}
+    .website{background:linear-gradient(135deg,var(--wood),var(--wood2));color:#fff;opacity:.94}
+    .website .icon{background:rgba(255,255,255,.14)}
+    .soon{
+      display:inline-flex;align-items:center;gap:7px;margin-top:18px;padding:9px 12px;border-radius:999px;
+      background:#f1e7dc;color:var(--wood);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--wood2);box-shadow:0 0 0 5px rgba(122,67,31,.12)}
+    footer{text-align:center;padding:0 26px 26px;color:#8b847b;font-size:.78rem}
+    @media(max-width:380px){body{padding:12px}main{padding:28px 18px 22px}.logo{width:155px;height:155px}.btn{padding:15px}}
+  </style>
+</head>
+<body>
+  <section class="shell">
+    <div class="top"></div>
+    <main>
+      <div class="logo"><img src="assets/roblab-logo.jpg" alt="Logo de RobLab"></div>
+      <h1>ROBLAB</h1>
+      <p class="tagline">Diseño, fabricación y soluciones personalizadas para personas, marcas y negocios.</p>
+
+      <div class="slashes" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="links">
+        <a class="btn whatsapp" href="https://wa.me/56948442497?text=Hola%20RobLab,%20quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener">
+          <span class="icon">✦</span>
+          <span class="label"><strong>WhatsApp</strong><small>+56 9 4844 2497</small></span>
+          <span class="arrow">→</span>
+        </a>
+
+        <a class="btn instagram" href="https://www.instagram.com/roblab.lp/" target="_blank" rel="noopener">
+          <span class="icon">◎</span>
+          <span class="label"><strong>Instagram</strong><small>@RobLab.lp</small></span>
+          <span class="arrow">→</span>
+        </a>
+
+        <div class="btn website" aria-disabled="true">
+          <span class="icon">⌂</span>
+          <span class="label"><strong>RobLab.cl</strong><small>Página web oficial</small></span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+
+      <div style="text-align:center"><span class="soon"><span class="dot"></span>Próximamente</span></div>
+    </main>
+    <footer>© 2026 RobLab · Illapel, Chile</footer>
+  </section>
+</body>
+</html>
